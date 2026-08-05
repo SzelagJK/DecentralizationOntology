@@ -125,7 +125,7 @@ Each subject produces
 
 $$
 \vec d_u=
-\begin{bmatrix}T_L(u)\\I_L(u)\end{bmatrix},
+\begin{bmatrix}T_L(u)\ I_L(u)\end{bmatrix},
 \qquad
 \|\vec d_u\|_2=\sqrt{T_L(u)^2+I_L(u)^2}.
 $$
@@ -185,7 +185,7 @@ For sampled coverage $q_u$, subject support is constructed as
 
 $$
 \lambda_i(p_u)=
-\mathrm{clip}\!\left(\mathrm{round}(n_iq_u),1,n_i\right),
+\mathrm{clip}\left(\mathrm{round}(n_iq_u),1,n_i\right),
 \qquad
 \delta_i(p_u)=\sum_{v\in V_{u,i}}c_{u,i}(v).
 $$
