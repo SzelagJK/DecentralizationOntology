@@ -90,7 +90,7 @@ T_L(u)=
 \begin{cases}
 0,&\delta(p_u)=1,\\
 1,&r_v(u)=0,\\
-\exp\!\left[-\dfrac{r_v(u)^2|G_s(u)|^{\epsilon_u}}{n}\right],&\text{otherwise}.
+\exp\left[-\dfrac{r_v(u)^2|G_s(u)|^{\epsilon_u}}{n}\right],&\text{otherwise}.
 \end{cases}
 $$
 
@@ -111,7 +111,7 @@ I_L(u)=
 \begin{cases}
 0,&m=0\ \text{or}\ \delta(p_u)=1\ \text{or}\ r_e(u)=0,\\
 1,&r_e(u)=n-1\ \text{and}\ \lambda(p_u)>1,\\
-\exp\!\left[
+\exp\left[
 1-\left(\dfrac{\lambda(p_u)}{n}\right)^{-\epsilon_u^2/r_e(u)}
 \right],&\text{otherwise}.
 \end{cases}
@@ -192,36 +192,7 @@ $$
 
 Current browser-side limits are 250,000 vertices per system and 100,000 systems per batch, with additional budgets of 25,000,000 vertex instances, 100,000,000 edge instances, and 12,500,000 edges in one system. Evaluation uses the complete generated graph; only large visual previews are simplified.
 
-## Source layout and tests
-
-```text
-src/index.html   Document structure
-src/styles.css   Responsive styling and visualizations
-src/app.js       Graph editing, validation, metrics, simulation, and comparison
-build.mjs        Standalone HTML builder
-tests/           Core and browser-DOM regression tests
-dist/            Generated standalone application
-```
-
-Run the implementation tests with:
-
-```bash
-node tests/core.test.mjs
-node tests/dom.test.mjs
-```
-
-The core suite checks the four paper examples, the separation of decentralization from distribution, all 16 topology generators, validation rules, and exact evaluation of a 100,000-vertex sparse graph.
-
-## Limitations
-
-- This is a browser-side research prototype, not a hardened graph-processing service.
-- Dense graphs and very large batches may exhaust browser memory despite the configured workload limits.
-- Long computations run locally and remain dependent on browser and device performance.
-- Disconnected-topology handling is explicitly an implementation extension.
-- $r_e$ is implemented as minimum supporting-vertex degree, corresponding to full vertex isolation; alternative notions of functional compromise would require a different cut computation.
-- Numerical output does not replace checking whether the selected subjects, realization counts, and $\epsilon$ values correctly represent the system being studied.
-
-## References and design credit
+## References
 
 - *Defining Decentralization: An Ontological Perspective*, anonymized manuscript, especially the modeling and analytical layers and Propositions 1 & 2.
 - [Depth-First Search and Linear Graph Algorithms](https://epubs.siam.org/doi/10.1137/0201010)
