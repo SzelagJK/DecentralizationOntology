@@ -8,19 +8,7 @@ A standalone browser tool for constructing, importing, simulating, evaluating, a
 
 ## Run the application
 
-Open the following file in a modern browser:
-
-```text
-dist/decentralization-ontology-sandbox.html
-```
-
-The distributed file contains its HTML, CSS, and JavaScript in one document. It requires no server, package installation, or network connection.
-
-To rebuild the standalone file from source, run from this directory:
-
-```bash
-node build.mjs
-```
+Implementation accessible on: https://szelagjk.github.io/DecentralizationOntology/
 
 ## Model
 
@@ -54,7 +42,7 @@ The implementation performs one iterative Tarjan low-link traversal over the **f
 An articulation vertex is a vertex whose removal increases the number of connected components. Tarjan's test for a non-root DFS vertex $v$ and child $w$ is
 
 $$
-\operatorname{low}(w)\geq\operatorname{disc}(v).
+\mathrm{low}(w)\geq\mathrm{disc}(v).
 $$
 
 A DFS root is an articulation vertex when it has more than one DFS child. Vertex and neighbour order may change the DFS tree, but not the resulting articulation set.
@@ -73,8 +61,9 @@ For each $v\in A_u$, let $\mathcal C_v$ contain the components of $G_t-v$. The r
 
 $$
 C_v^\star\in
-\operatorname*{arg\,max}_{C\in\mathcal C_v}^{\mathrm{lex}}
-\left(|C\cap(V_u\setminus\{v\})|,|C|\right).
+\underset{C\in\mathcal C_v}{\mathrm{arg\,max}}
+\left(|C\cap(V_u\setminus\{v\})|,|C|\right)
+\quad\text{(lexicographically)}.
 $$
 
 This first maximizes the number of remaining subject-supporting vertices and uses total component order only to break a tie. All other components form the isolated portion:
@@ -196,7 +185,7 @@ For sampled coverage $q_u$, subject support is constructed as
 
 $$
 \lambda_i(p_u)=
-\operatorname{clip}\!\left(\operatorname{round}(n_iq_u),1,n_i\right),
+\mathrm{clip}\!\left(\mathrm{round}(n_iq_u),1,n_i\right),
 \qquad
 \delta_i(p_u)=\sum_{v\in V_{u,i}}c_{u,i}(v).
 $$
@@ -234,6 +223,6 @@ The core suite checks the four paper examples, the separation of decentralizatio
 
 ## References and design credit
 
-- *Defining Decentralization: An Ontological Perspective*, anonymized manuscript, especially the modeling and analytical layers and Propositions 1--2.
-- [Depth-First Search and Linear Graph Algorithms](https://epubs.siam.org/doi/10.1137/0201010), the low-link basis for articulation-point computation.
+- *Defining Decentralization: An Ontological Perspective*, anonymized manuscript, especially the modeling and analytical layers and Propositions 1 & 2.
+- [Depth-First Search and Linear Graph Algorithms](https://epubs.siam.org/doi/10.1137/0201010)
 - Interface design adapted from [Arcana by HTML5 UP](https://html5up.net/arcana), used under the [Creative Commons Attribution 3.0 license](https://html5up.net/license).
