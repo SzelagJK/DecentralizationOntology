@@ -1,6 +1,6 @@
 > **Prototype disclaimer**
 >
-> The following implementation is a research prototype supplied as a supporting artifact for the paper titled **“Defining Decentralization: An Ontological Perspective.”** Rather than a production ready product. Results should be checked against the definitions and propositions in the paper.
+> The following implementation is a research prototype supplied as a supporting artifact for the paper titled **“Defining Decentralization: An Ontological Perspective.”** Rather than a production ready software. Results should be checked against the definitions and propositions in the paper.
 
 # Decentralization Ontology Sandbox
 
