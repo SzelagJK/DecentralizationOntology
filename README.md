@@ -1,6 +1,6 @@
 > **Prototype disclaimer**
 >
-> This software is a research prototype supplied only as a supporting artifact for the anonymized paper **“Defining Decentralization: An Ontological Perspective.”** It is not production-ready and has not been hardened for security-critical, safety-critical, or high-availability use. Results should be checked against the definitions and propositions in the paper.
+> The following implementation is a research prototype supplied as a supporting artifact for the paper titled **“Defining Decentralization: An Ontological Perspective.”** Rather than a production ready product. Results should be checked against the definitions and propositions in the paper.
 
 # Decentralization Ontology Sandbox
 
